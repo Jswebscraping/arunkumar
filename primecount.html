@@ -1,0 +1,91 @@
+ <!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color:rgb(245, 188, 188);
+}
+</style>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+    const no=[1,2,3,4,5];
+
+    let text = "";
+
+    for(let i=1;i< no.length;i++){
+
+        text += no[i] +;
+    
+    }
+
+    document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            background-color:rgb(245, 188, 188);
+        }
+        </style>
+        </head>
+<body>
+
+<h2>Finding the prime numbers and their counts	</h2>
+<p id="demo1"></p>
+<p id="demo"></p>
+<p id="demoo1"></p>
+<p id="demoo"></p>
+
+
+<script>
+const no = [37,3,4,11,88,37];
+document.getElementById("demo1").innerHTML = "<h3>Given numbers are</h3>"+no;
+let text = "";
+let textt = "";
+var count =0;
+var flag =0;
+
+for(let j=0;j<no.length;j++)
+{
+for(i=2; i <= no[j]/2; i++) 
+{
+    if(no[j]%i == 0)
+    {
+						flag = 1;
+						break;
+                    
+	}
+    else
+    {
+        flag =0;
+        break;
+    }
+}
+            
+    if(flag == 0)
+    {
+        text += no[j] +",";
+        document.getElementById("demo").innerHTML = text+"<b>is a prime number</b><br>";
+        count++;
+        document.getElementById("demoo1").innerHTML ="<b>Number of prime numbers are</b> "+count;
+    }
+    else
+    {
+    textt += no[j] +  ",";
+        document.getElementById("demoo").innerHTML = textt+"<b>is not a prime number</b><br>";
+        
+    }
+  
+}
+
+</script>
+
+</body>
+</html>

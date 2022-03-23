@@ -1,0 +1,74 @@
+ <!--<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color:rgb(245, 188, 188);
+}
+</style>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+    const no=[1,2,3,4,5];
+
+    let text = "";
+
+    for(let i=1;i< no.length;i++){
+
+        text += no[i] +;
+    
+    }
+
+    document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            background-color:rgb(245, 188, 188);
+        }
+        </style>
+        </head>
+<body>
+
+<h2>Generate odd and even numbers and their counts	</h2>
+<p id="demo1"></p>
+<p id="demo"></p>
+<p id="demoo1"></p>
+<p id="demoo"></p>
+<p id="demoo2"></p>
+
+<script>
+const no = [1,2,3,4,9,8];
+document.getElementById("demo1").innerHTML = "<h3>Given numbers are</h3>"+no;
+let text = "";
+let textt = "";
+var count =0;
+var countt =0
+for (let i = 0; i < no.length; i++) {
+    if(no[i]%2==0)
+    {
+        text += no[i] +",";
+        document.getElementById("demo").innerHTML = "<b>even</b><br>"+text;
+        count++;
+        document.getElementById("demoo1").innerHTML ="<b>Number of even numbers are</b> "+count;
+    }
+  else{
+    textt += no[i] +  ",";
+        document.getElementById("demoo").innerHTML = "<b>odd</b><br>"+textt;
+        countt++;
+  }
+  document.getElementById("demoo2").innerHTML ="<b>Number of odd numbers are</b> "+countt;
+}
+
+
+</script>
+
+</body>
+</html>
